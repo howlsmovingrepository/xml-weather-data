@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT theweather (image, credit, current_observation+)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT credit EMPTY >
+<!ATTLIST image imageurl CDATA #REQUIRED title CDATA #REQUIRED>
+<!ATTLIST credit link CDATA #REQUIRED crediturl CDATA #REQUIRED>
+<!ELEMENT current_observation (location, observation_time, observation_date, weather, temperature, wind, pressure, dewpoint, windchill, visibility_mi)>
+<!ATTLIST current_observation station_id CDATA #IMPLIED>
+<!ELEMENT location (#PCDATA | latitude | longitude)*>
+<!ELEMENT latitude (#PCDATA)>
+<!ELEMENT longitude (#PCDATA)>
+<!ELEMENT observation_time (#PCDATA)>
+<!ELEMENT observation_date (#PCDATA)>
+<!ELEMENT weather (#PCDATA)>
+<!ELEMENT temperature (temperature_string, temp_f, temp_c, relative_humidity)>
+<!ELEMENT temperature_string (#PCDATA)>
+<!ELEMENT temp_f (#PCDATA)>
+<!ELEMENT temp_c (#PCDATA)>
+<!ELEMENT relative_humidity (#PCDATA)>
+<!ELEMENT wind (wind_string, wind_dir, wind_degrees, wind_mph, wind_kt)>
+<!ELEMENT wind_string (#PCDATA)>
+<!ELEMENT wind_dir (#PCDATA)>
+<!ELEMENT wind_degrees (#PCDATA)>
+<!ELEMENT wind_mph (#PCDATA)>
+<!ELEMENT wind_kt (#PCDATA)>
+<!ELEMENT pressure (pressure_string, pressure_mb, pressure_in)>
+<!ELEMENT pressure_string (#PCDATA)>
+<!ELEMENT pressure_mb (#PCDATA)>
+<!ELEMENT pressure_in (#PCDATA)>
+<!ELEMENT dewpoint (dewpoint_string, dewpoint_f, dewpoint_c)>
+<!ELEMENT dewpoint_string (#PCDATA)>
+<!ELEMENT dewpoint_f (#PCDATA)>
+<!ELEMENT dewpoint_c (#PCDATA)>
+<!ELEMENT windchill (windchill_string, windchill_f, windchill_c)>
+<!ELEMENT windchill_string (#PCDATA)>
+<!ELEMENT windchill_f (#PCDATA)>
+<!ELEMENT windchill_c (#PCDATA)>
+<!ELEMENT visibility_mi (#PCDATA)>
